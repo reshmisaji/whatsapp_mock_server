@@ -1,0 +1,3 @@
+[submodule "whatsapp_mock_UI"]
+	path = whatsapp_mock_UI
+	url = https://github.com/reshmisaji/whatsapp_mock_UI
