@@ -16,8 +16,8 @@ let users = [];
 
 const getMessages = function() {
   connection.query(
-    `select time(time)as time,text,name from messages`,
-    (err, data, fields) => (messages = data)
+    `select time(time)as time,text,name from step`,
+    (err, data, fields) => (messages = data.reverse())
   );
 };
 
@@ -30,7 +30,7 @@ const getUsers = function() {
 const addMessage = function(data) {
   const { message, name } = JSON.parse(data);
   connection.query(
-    `insert into messages (text,name) values ("${message}","${name}")`
+    `insert into step (text,name) values ("${message}","${name}")`
   );
   messages.push(messages);
 };
